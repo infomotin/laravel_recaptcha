@@ -33,7 +33,7 @@ class VerifyRecaptchaTokenReload
             //     'success' => false
             // ], 401);
         }
-        if($response->score <= 0.8) {
+        if($response->score <= 1) {
 
             throw new RecaptchaVerificationFaildReload('Invalid Recaptcha Score');
             // return response()->json([
